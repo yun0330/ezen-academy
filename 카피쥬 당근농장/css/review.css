@@ -1,0 +1,153 @@
+body{
+    background-image: url(../images/bg.png);
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #333333;
+}
+
+header{
+    margin: 0 auto 44px;
+    width: 1200px;
+}
+
+h1{
+    text-align: center;
+    padding: 20px 0px 16px;
+}
+
+header nav ul{
+    display: flex;
+    justify-content:center;
+    padding: 12px 0px 10px;
+    border-top: 2px solid saddlebrown;
+    border-bottom: 2px solid saddlebrown;
+    background-color: blanchedalmond;
+}
+
+
+header nav li{
+    margin: 0px 20px;
+    font-weight: 700;
+}
+
+
+header nav li a:hover{
+    text-decoration: underline double 2px;
+}
+
+
+/* div 태그와 span 태그는 문서 구조에 영향주지 않으면서
+의미와 상관없이 css 작용을 위한 목적으로 쓰입니다
+div태그로 감싸면 block박스를 생성하고
+span 태그로 감싸면 inline박스를 생성합니다 */
+
+/* <h1>
+<p>텍스트의 <span> 일부 </span>입니다
+</p>
+</h1> */
+
+div{
+    width: 1200px;
+    margin: 0 auto 44px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+main{
+    flex-basis: 820px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
+    padding: 50px 30px;
+}
+
+
+aside{
+    flex-basis: 200px;
+}
+
+
+aside nav{
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow:0px 0px 8px rgba(0,0,0,0.2);
+    padding: 20px 20px;
+    margin-bottom: 25px;
+}
+
+aside nav h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+.categoryNav ul li{
+    list-style-type: square;
+    margin: 0px 0px 16px 12px;
+    font-size: 16px;
+}
+
+.recentNav ul li{
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.recentNav ul {
+    height: 240px;
+    overflow:  hidden scroll;
+}
+
+article h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+time{
+    background-color: rgb(148, 206, 148);
+    border-radius: 0px 22px 22px 22px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    padding: 15px 20px;
+    display: inline-block;
+}
+
+.postdata{
+    margin-bottom: 25px;
+}
+
+.eyecatch {
+    margin-bottom: 25px;
+}
+
+article h3{
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-bottom: 2px solid greenyellow;
+    background-image: url(../images/h2_icon.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    padding: 20px 10px 10px 40px;
+}
+
+article section p{
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+article section{
+    margin-bottom: 50px;
+}
+
+footer{
+    background-color: #7c5d48;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 20px;
+}

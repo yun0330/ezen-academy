@@ -1,0 +1,33 @@
+/* Todo.css */
+.list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .input-base {
+    flex: 1;
+    padding: 10px;
+    margin: 0 10px;
+    border: none;
+    border-bottom: 1px solid transparent;
+    outline: none;
+  }
+  
+  .input-base:focus {
+    border-bottom: 1px solid #000;
+  }
+  
+  .delete-button {
+    background: none;
+    border: none;
+    color: #d9534f;
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+  
+  .delete-button:hover {
+    color: #c9302c;
+  }
+  

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>FARM CAPYZOU</title>
+    <link rel = "stylesheet" href="css/reset.css">
+    <link rel = "stylesheet" href="css/FARM.css">
+  </head>
+  <!-- 웹사이트의 영영을 구분하는 태그가 존재한다
+  맨 윗부분은 header 태그, 본문은 main 태그, 네비게이션은 nav 태그로 구분 -->
+  <body>
+    <header>      
+     <h1>
+       <img src="images/logo.png" alt="FARM CAPYZOU">
+     </h1>
+    <nav>
+      <ul>
+      <li><a href="#"> HOME</a></li>
+      <li><a href="#"> ABOUT</a></li>  
+      <li><a href="#"> BLOG</a></li>
+      <li><a href="#"> SHOP</a></li>
+      <li><a href="#"> CONTACT</a></li>          
+  </ul>
+  </nav>
+  </header>
+  <div>
+   <main>
+    <article>
+  <!--article 태그는 뉴스기사나 블로그 게시물을 나타낼 때 씁니다
+  article 태그로 마크업을 하면 아웃라인(목차)이 명확해 집니다
+***문서의 아웃라인이 잘 잡혀야지 컴터가 컨텐츠의 내용을 바르게 인식할 수 있습니다
+그래서 section 태그를 달아두었습니다
+다만,section 태그는 디자인적용을 위해 사용하진 않는다
+즉 전체 제목에 해당하는 내용은 section 태그로 묶지 않느다 -->
+    <h2>당근 농장의 하루를 소개합니다</h2>
+    <!-- time 태그는 게시글 발행일과 같은 시간이 중요한 의미를 가질 때 사용 -->
+    <p class="postdata">
+    <time detetime="3023-08-08T13:13">
+    3023년 8월 8일 오후 1시 13분
+  </time>
+</P>
+<p class="eyecatch">
+  <img src="images/eyecatch.png" alt="당근 농장 소개">
+     </p>
+    
+    
+  <!-- 제목과 다음에 오는 단락을 감쌉니다 -->
+  <section>
+   <h3>6:00~ 당근 수확과 아침 식사</h3>
+   <article>
+    <p>아침에는 6시쯤 일어납니다. 언제까지나 이불 속에 파묻혀 있고 싶지만, 영차! 하고 힘내서 일어납니다.<br>
+    밖에 나가면 먼저 해님에게 '안녕, 좋은 아침이에요.'라고 인사.<br></p>
+   <p> 그다음 잘 여문 당근을 수확합니다.
+    못난이 당근은 제가 아침밥으로 먹습니다.
+    수확을 하면서 아침도 해결할 수 있어서 무척 효율적입니다!<br></p>
+    <!-- 자기 완결성을 갖는 이미지는 figure 태그를 활용한다
+    자기완결성을 갖는 이미지란 그 이미지 자테가 자신을 설명하는,
+  사이트 내용과 상관없이 이미지 자체가 독립적인 성질을 갖는 것을 의미한다
+해당 태그에 대한 설명을 figure 태그로 붙일 수 있는데 필수는 아니다
+
+그럼 뭐가 figure인데?
+본문에서 다음 그림과 같이 이런식으로 내용이 해당 그림을 강조하면
+자기완결성이 없습니다 본문에 직접적인 언급이 없는 이미지가 figure요소입니다 -->
+  <figure>
+    <img src="images/carrots.png" alt="못난이 당근 그림">
+    <figcaption>아무상관없음</figcaption>
+  </figure>
+  </section>
+  <section>
+    <h3>8:30~12:30 슈퍼마켓이나 휴게소로 출하</h3> 
+    <p>아침에 캔 당근을 산지 직송 매장으로 운반합니다. 일과 중 가장 힘을 써야 하는 일이네요.<br>
+    슬슬 리어카가 아니라 전기로 움직이는 차를 구입해볼까 생각하고 있어요.</p>
+  </section>
+  <section>
+    <h3>12:30~18:00 밭일과 저녁 식사</h3>
+    <p>당근의 상태를 보면서 물을 주거나, 벌레를 잡거나, 비닐을 씌우거나 합니다.<br>
+    지금은 당근이 메인이지만, 장기적으로는 더 많은 작물을 키우고 싶어서 관련 준비도 같이 하고 있습니다.</p>
+  </section>
+  <section>
+    <h3>18:30~ 목욕과 취침</h3>
+    <p>느긋하게 목욕을 하고 잠자리에 듭니다. 이불 속은 천국입니다.</p>
+  </article>
+  </section>
+  </main>
+  <!-- class와 id를 통해서 고유의 식별질,ㄹ 가지는 점은 동일하다
+  하지만, class는 복수의 식별자 등록가능
+class="name1 name2"
+id는 복수 등록이 안됨 id="name1" -->
+
+  <aside>
+    <nav class="categoryNav">
+    <h2>Category</h2>
+    <ul>
+    <li><a href="#">농가의 일상(4)</a></li>
+    <li><a href="#">채소 재배 노하우(5)</a></li>
+    <li><a href="#">카피조우 레시피(2)</a></li>
+    <li><a href="#">농장 경영(2)</a></li>
+  </ul>
+  </nav>
+  <nav class="recentNav">
+    <h2>Recent Articles</h2>
+    <ul>
+    <li><a href="#">온실 재배 주의할 점 TOP10</a></li>
+    <li><a href="#">현역 농부가 해충 퇴치법을 알려드립니다</a></li>
+    <li><a href="#">집에서도 가능! 화분 재배의 핵심</a></li>
+    <li><a href="#">간단하게 만드는 당근 요리 소개!</a></li>
+    <li><a href="#">농사지어서 먹고살 수 있을까? 제일 궁금해하는 연 수입 대공개</a></li>
+      <li><a href="#">안녕하세요. FARM CAPYZOU입니다.</a></li>
+  </ul>
+  </nav>
+  <p>
+    <img src="images/side_banner.png" alt="배너">
+  </p>
+  </aside>
+</div>
+  <footer>
+    <!--small 태그는 주석처럼 작게 표시되는 태그의 의미 외에도
+    저작권 정보에 관련된 내용이란 의미도 있다 -->
+   <p><small> © 3023 FARM CAPYZOU</small></p>
+  </footer>
+  
+
+
+
+  </body>
+</html>

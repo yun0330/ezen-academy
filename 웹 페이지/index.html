@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Project</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <!-- div태그로 모든 요소를 감싼 점이 포인트이다.
+div태그는 전체 프로젝트의 기준 너비 
+(width 1140px)를 적용하기 위한 부모 태그요소로 사용하였다 -->
+      <div class="container">
+        <h1>
+          <button data-animation-scroll="true" data-target="#main">SU</button>
+        </h1>
+        <nav>
+          <ul>
+            <li><button data-animation-scroll="true" data-target="#about">About</button></li>
+            <li><button data-animation-scroll="true" data-target="#features">Features</button></li>
+            <li><button data-animation-scroll="true" data-target="#portfolio">Portfolio</button></li>
+            <li><button data-animation-scroll="true" data-target="#contact">Contact</button></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <div class="container">
+        <h4>Welcome</h4>
+        <h2>I'M A <span></span></h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+          blanditiis molestias harum, consequuntur ipsa amet, ratione quae et
+          veniam qui consectetur culpa excepturi commodi pariatur eaque,
+          exercitationem facere. Molestias, et!
+        </p>
+        <button class="download">DOWNLOAD CV</button>
+        <button class="mouse">
+          <i class="fa-solid fa-computer-mouse"></i>
+        </button>
+      </div>
+    </main>
+    <!-- about me 영역입니다 -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="title">
+          <h4>who am I</h4>
+          <h2>about me</h2>
+        </div>
+        <div class="about-self">
+          <div class="left">
+            <img src="images/me_alone.jpg" alt="" />
+          </div>
+          <div class="right">
+            <h3>hello, <strong>I`m su</strong></h3>
+            <p>i`m a k-digital student & full-stack developer</p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam,
+              beatae! Vitae eius neque
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam,
+              beatae! Vitae eius neque
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam,
+              beatae! Vitae eius neque
+            </p>
+            <div class="social">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-twitch"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 여기까지가 about me 파트 -->
+    <section id="features" class="do">
+      <div class="container">
+        <div class="title">
+          <h4>features</h4>
+          <h2>what i do</h2>
+        </div>
+
+        <div class="do-me">
+          <div class="do-inner">
+            <div class="icon">
+              <i class="fa-brands fa-html5"></i>
+            </div>
+            <div class="content">
+              <h3>HTML5</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas impedit pariatur at eos architecto tempora corporis?
+                Quibusdam, mollitia et. Adipisci nostrum numquam doloribus
+                distinctio nesciunt.
+              </p>
+            </div>
+          </div>
+          <div class="do-inner">
+            <div class="icon">
+              <i class="fa-brands fa-css3-alt"></i>
+            </div>
+            <div class="content">
+              <h3>CSS3</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas impedit pariatur at eos architecto tempora corporis?
+                Quibusdam, mollitia et. Adipisci nostrum numquam doloribus
+                distinctio nesciunt.
+              </p>
+            </div>
+          </div>
+          <div class="do-inner">
+            <div class="icon">
+              <i class="fa-brands fa-bootstrap"></i>
+            </div>
+            <div class="content">
+              <h3>bootstrap v5.0</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas impedit pariatur at eos architecto tempora corporis?
+                Quibusdam, mollitia et. Adipisci nostrum numquam doloribus
+                distinctio nesciunt.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="bg"></div>
+
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="title">
+          <h4>portfolioback</h4>
+          <h2>portfolio</h2>
+        </div>
+        <div class="portfolio-me">
+          <div class="portfolio-inner">
+            <img src="images/mock1.png" alt="sample" />
+            <strong>branding</strong>
+            <h3>package design</h3>
+          </div>
+          <div class="portfolio-inner">
+            <img src="images/mock2.png" alt="sample" />
+            <strong>development</strong>
+            <h3>tablet app dev</h3>
+          </div>
+          <div class="portfolio-inner">
+            <img src="images/mock3.png" alt="sample" />
+            <strong>marketing</strong>
+            <h3>coka cola</h3>
+          </div>
+          <div class="portfolio-inner">
+            <img src="images/mock4.png" alt="sample" />
+            <strong>app</strong>
+            <h3>facebook clone</h3>
+          </div>
+          <div class="portfolio-inner">
+            <img src="images/mock5.png" alt="sample" />
+            <strong>app</strong>
+            <h3>netflix clone</h3>
+          </div>
+          <div class="portfolio-inner">
+            <img src="images/mock6.png" alt="sample" />
+            <strong>web</strong>
+            <h3>firm design</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="title">
+          <h4>CONTACT</h4>
+          <h2>contact with me</h2>
+        </div>
+        <div class="contact-me">
+          <div class="left">
+            <div class="card">
+              <div class="icon">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div class="info-text">
+                <h3>phone</h3>
+                <p>010-2222-1111</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="icon">
+                <i class="fa-solid fa-envelope-open-text"></i>
+              </div>
+              <div class="info-text">
+                <h3>email</h3>
+                <p>sangjpar@gmail.com</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="icon">
+                <i class="fa-solid fa-location-crosshairs"></i>
+              </div>
+              <div class="info-text">
+                <h3>address</h3>
+                <p>구월로데오 롯백 노티드 도넛</p>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <form action="#">
+              <div class="form-group">
+                <label for="name">name</label>
+                <input type="text" id="name" />
+              </div>
+              <div class="form-group">
+                <label for="email">email</label>
+                <input type="text" id="email" />
+              </div>
+              <div class="form-group">
+                <label for="msg">message</label>
+                <textarea id="msg"></textarea>
+              </div>
+              <button type="submit">send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- script 태그는 수정하지 않습니다. -->
+    <script src="script.js"></script>
+  </body>
+</html>

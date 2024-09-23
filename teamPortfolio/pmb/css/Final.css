@@ -1,0 +1,429 @@
+/* reset css 같은 설정입니다
+여백이랑 경계선까지 박스 영역에 계산되게
+box-sizing: border-box; 적용함 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 외부 링크 접속햇다고 글자색이 안바뀌게 설정 */
+a, a:link, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* 여기서부터 해더역역 */
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 1rem;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    padding: 10px;
+}
+
+/* 버튼들을 투명처리하고 마우스커서가 가면 손모양으로 변함 */
+header button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+/* 글씨를 굵게 하고 크기를 일반 크기 2배로 설정하였습니다 */
+header h1 button {
+    font-size: 32px; 
+    font-weight: bold;
+}
+
+/* 글자크기를 일반 1.2배  정도로만 설정 */
+header nav ul li button {
+    font-size: 18px;
+}
+
+
+main {
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/me.jpg) center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 56px;
+    margin: 2rem 0;
+    letter-spacing: 3px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+main h4 {
+    font-size: 32px;
+}
+
+main p {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+main button.download {
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 20px;
+    padding: 16px 32px;
+    margin-top: 48px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main button.mouse {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 32px;
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* updown이란 이름의 에니메이션 효과를 정의해서
+    매 1초간 실행시키고 무한반복한다 */
+    animation: upDown 1s ease-in-out infinite;
+    cursor: pointer;
+}
+
+@keyframes upDown {
+    0% {
+        bottom: 16px;
+    }
+    50% {
+        bottom: 24px;
+    }
+    100% {
+        bottom: 16px;
+    }
+}
+
+/* 문장 맨 뒤에 깜빡이는 커서모양 에니메이션 효과를 구현 (막대기) */
+main h2 span::after {
+    content:"";
+    height: 40px;
+    width: 3px;
+    background-color: #fff;
+    display: inline-block;
+    animation: blink .7s ease-in-out infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+section {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 80px 0;
+}
+
+/* nth-child(2n) 이 명령은 짝수번째 section 태그 css 적용하란 말입니다(css는 1부터 숫자시작함) */
+section:nth-child(2n) {
+    background-color: #e3e3e3;
+}
+
+section .title {
+    margin-bottom: 48px;
+}
+
+section .title h4 {
+    font-size: 1.35rem;
+    color: #ed4848;
+    position: relative;
+}
+
+section .title h2 {
+    font-size: 3.5rem;
+}
+
+section .title p {
+    font-size: 1.15rem;
+}
+
+section .about-self .left {
+    width: 50%;
+    float: left;
+}
+
+/* 이미지의 크기가 부모영역을 넘지않게 최대너비를 부모 너비만큼으로 제한 */
+section .about-self .left img {
+    max-width: 100%;
+}
+
+section .about-self .right {
+    width: 50%;
+    float: left;
+    padding: 0 2rem;
+}
+
+/* float 속성은 맨 왼쪽부터 컨텐츠가 둥둥 뜨는 느낌으로 컨텐츠를 정렬 시키는 기능을 합니다
+근데 flooat속성은 적용대상의 원래 위치를 보장하지 않습니다
+그래서 calear속성으로 원래 위치가 무시되지 않도록 합니다 */
+section .about-self::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+section .about-self .right h3 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+section .about-self .right h3 strong {
+    color: #ed4848;
+}
+
+section .about-self .right p {
+    font-size: 1.15rem;
+    margin: 1rem 0;
+}
+
+section .about-self .right .social a {
+    font-size: 2.5rem;
+    margin-right: 0.2rem;
+}
+
+/* what i do */
+
+/* float의 속성이 주변태그를 무시하고 부모속성을 가리면서
+페이지에 배치되는 현상을  clear: both;를 통해 막습니다 */
+section .do-me:hover {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+section .do-me .do-inner {
+    background-color: #fff;
+    width: 30%;
+    padding: 2rem;
+    float: left;
+    margin-right: 5%;
+    cursor: pointer;
+}
+
+/* 마지막 사각형 외부여백을 없앴습니다 */
+section .do-me .do-inner:last-child {
+    margin-right: 0;
+}
+
+section .do-me .do-inner .icon i {
+    font-size: 2.5rem;
+    color: #ff6a6a;
+}
+
+section .do-me .do-inner .content h3 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+section .do-me .do-inner .content p {
+    font-size: 1.15rem;
+}
+
+section .do-me .do-inner:hover {
+    background-color: #ff6a6a;
+    color: #ffffff ;
+}
+
+section .do-me .do-inner:hover i {
+    color: white;
+}
+
+.bg {
+    background: url('../images/background.jpg') center center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* 그림만 지정한다고 나오지 않는다 그림이 들어갈 영역을 제공해 주어야 한다
+    div 태그로 따로 영역을 배정하지 않았으므로 height로 직접 영영을 배정하자 */
+    height: 650px;
+}
+
+section::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* portfolio-me */
+
+section .portfolio::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+section.portfolio .portfolio-inner {
+    width: 30%;
+    margin-right: 5%;
+    padding: 1rem 1rem 1.5rem 1rem;
+    float: left;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    margin-bottom: 3rem;
+}
+
+/* inner:nth-child(3n) 매 3번째 요소마다 오른쪽에 부여된 여백을 없애서
+공간을 활용하겠다 */
+section.portfolio .portfolio-inner:nth-child(3n) {
+    margin-right: 0;
+}
+
+section.portfolio .portfolio-inner img {
+    width: 100%;
+    display: block;
+}
+
+section.portfolio .portfolio-inner strong {
+    color: #ff6a6a;
+    margin: 0.5rem 0;
+    display: block;
+}
+
+section.portfolio .portfolio-inner h3 {
+    font-size: 1.75rem;
+}
+
+/* Contact With Me */
+
+/* float 속성이 주변을 무시하지 않도록 다른영역처럼 clear: both; 처리 */
+section.contact .contact-me::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+section .contact-me .left {
+    width: 30%;
+    float: left;
+}
+
+section .contact-me .right {
+    width: 65%;
+    margin-left: 5%;
+    float: left;
+}
+
+section.contact .contact-me .left .card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+section.contact .contact-me .left .icon i {
+    font-size: 2rem;
+    margin-right: 15px;
+}
+
+section.contact .contact-me .right {
+    float: left;
+    width: 65%;
+    margin-left: 5%;
+    margin-bottom: 2rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+
+section.contact .contact-me .right .form-group {
+    margin-bottom: 1.25rem;
+}
+
+section.contact .contact-me .right .form-group label {
+    display: block;
+    margin-bottom: 0.85rem;
+}
+
+section.contact .contact-me .right .form-group input {
+    padding: 0.6rem;
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+section.contact .contact-me .right .form-group input:focus {
+    border: 1px solid #719ece;
+    box-shadow: 0 0 10px #719ece;
+    outline: none;
+}
+
+section.contact .contact-me .right .form-group textarea {
+    height: 300px;
+    width: 100%;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+section.contact .contact-me .right .form-group textarea:focus {
+    border: 1px solid #719ece;
+    box-shadow: 0 0 10px #719ece;
+    outline: none;
+}
+
+section.contact .contact-me .right button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #f78b00;
+    border: none;
+    color: white;
+}
+
+/* 헤더영역에 css추가해서 메뉴가 안보이는 현상을 해결하기 */
+
+header.active {
+    background-color: black;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

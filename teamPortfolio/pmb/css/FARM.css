@@ -1,0 +1,190 @@
+/* 유니코드 다국어 설정 */
+@charset "UTF-8";
+
+body {
+  background-image: url(../images/bg.png);
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333333;
+}
+
+header {
+  width: 1200px;
+  margin: 0 auto 44px;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px 0px 16px;
+}
+/* header nav ul와 같이 쉼표없이 나열하면
+계층에 속하는 태그만 적용되는데,
+쉼표가 header ,nav ,ul 이렇게 있으면 
+해당 태그의 요소 전부 다 선택하는 것을
+'자손 선택자' 라고 합니다 */
+header nav ul {
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid #7c5d48;
+  border-bottom: 2px solid #7c5d48;
+  background-color: rgba(255, 255, 255, 0.42);
+  padding: 10px 0px;
+}
+
+header nav ul li {
+  margin: 0 20px;
+  font-weight: bold;
+  color: #7c5d48;
+}
+
+/* 마우스를 대면 조건을 만족하는 경우를 a:hover로 나타냅니다 */
+
+header nav ul li a:hover {
+  text-decoration: underline double 3px;
+}
+
+/* body 태그에 직접 flex를 써버리면 body 아래 다른 자식 태그에도
+영향을 끼치게 됩니다
+그래서 태그 자체로는 의미가 없는 태그를 사용해서
+flex 등의 정렬 기능을 적용합니다
+그것이 이전에 언급한 <div></div> & <span></span> 태그입니다
+문서구조에 영향을 주지 않으면서 html을 그룹화 할 때 사용 */
+
+div {
+  width: 1200px;
+  margin: 0 auto 44px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+x축의 위치, y축의 위치, 흐림의 정도, 그림자 색상 및 투명도 */
+
+main {
+  flex-basis: 800px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 50px 30px;
+}
+
+aside {
+  flex-basis: 300px;
+}
+
+aside nav {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 25px;
+  padding: 30px 20px;
+}
+
+aside nav h2 {
+  margin-bottom: 15px;
+  font-size: 23px;
+  font-weight: bold;
+  color: #7c5d48;
+}
+
+aside nav ul {
+  font-size: 14px;
+}
+
+.categoryNav ul li {
+  list-style-type: square ;
+  margin: 10px 20px; 
+  color: #7c5d48;
+}
+
+.categoryNav ul li a {
+  color: black
+}
+
+.recentNav ul li {
+  border-bottom: 1px solid #7c5d48;
+  margin-bottom: 22px;
+  padding-bottom: 10px;
+}
+
+article h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* display:inline-block 이라고 하면 block & inline 의 속성이 합쳐졌음
+좌우 너비는 인라인처럼 컨텐츠 자체만의 너비를 가지면서
+블록 박스처럼 상하 여백의 지정이 가능하다 */
+time {
+  background-color: #91c777;
+  color: #ffffff;
+  font-weight:700;
+  border-radius: 0px 20px 20px 20px;
+  font-size: 18px;
+  padding: 10px 18px;
+  display:inline-block;
+}
+
+.postdate{
+    margin-bottom: 20px;
+
+}
+.eyecatch{
+    margin-bottom: 20px;
+    
+}
+/* 
+backgroung-image 는 해당 태그에 이미지를 반복해서 붙이게 된다
+암말 안하면 반복이 디폴트니까 반드시 no-repeat 옵션 붙인다 */
+/* 이미지의 위치는 좌측 바닥이라고 지정하였음
+background-position: left bottom; */
+
+article h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #6ab547;
+  background-image: url(../images/h2_icon.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  padding: 20px 10px 20px 45px;
+}
+
+/* 문장 간 간격을 행간이라 합니다
+line-height로 행간을 조정할 수 있습니다 */
+
+article p{
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+article section{
+  margin-bottom: 50px;
+}
+
+footer {
+  background-color: #523f2e;
+  color:#ffffff;
+  text-align: center;
+  padding: 14px 10px;
+
+}
+
+/* overflow는 박스의 내용물이 넘치는 경우 처리방식을
+결정하는 css이다
+scroll은 스크롤 기능으로 열람 시켜주는 것이고
+hidden은 감춰주는 것을 의미한다 
+auto로 지정하면 컴퓨터가 알아서 결정한다*/
+.recentNav ul{
+  height: 240px;
+  overflow: hidden scroll ;
+}
+
+
+
+
+
+
+  
+

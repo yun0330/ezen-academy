@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이젠 3조</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <!-- 심볼 마크를 위한 stylesheet 추가 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script><!--제이쿼리 추가-->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <div class="nav_logo">
+          <a href="">👀Ezen-3조</a>
+        </div>
+        <ul class="nav_menu">
+          <li><button data-animation-scroll="true" data-target="#backgroundStar">Home</button></li>
+          <li><button data-animation-scroll="true" data-target="#intro">Team</button></li>
+          <li><button data-animation-scroll="true" data-target="#teamProject">Team Project</button></li>
+          <li><button data-animation-scroll="true" data-target="#pv-section">Profil</button></li>
+          <li><button data-animation-scroll="true" data-target="#project-pic">Photo</button></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="backgroundStar container" id="backgroundStar">
+      <div class="stage"></div>
+      <div class="web">
+        <!-- web이라는 클래스를 주고, 자바스크립트 적용 -->
+        <div class="text"></div>
+      </div>
+    </section>
+
+    <section class="intro container" id="intro">
+      <div class="intro-container">
+        <h2 class="intro-title">Ezen 3Team</h2>
+        <div class="intro-box">
+          <div class="intro-flex">
+            <!-- intro-content는 스크롤자바시에 사용하기 위한 클래스이다. -->
+            <img
+                    class="intro-content2 intro-img"
+                    src="https://source.unsplash.com/featured/:1"
+                    alt="img"
+            />
+            <div class="intro-text intro-content">
+              <!-- 심볼 마크를 위한 span 태그 -->
+              <p class="intro-icon">
+                <span class="material-symbols-outlined">rocket_launch</span>
+              </p>
+              <p class="intro-text1">Team Member</p>
+              <p class="intro-text2"><span>팀장:</span> 문수현</p>
+              <p class="intro-text2">
+                <span>팀원:</span> 박준 안수빈 윤진서 편무빈 강채은
+              </p>
+              <p class="intro-text3">Team Introduce</p>
+              <p class="intro-text2">
+                Ezen 3조는 Back End, Front-End 등의 각자의 꿈을 가지고, 협업을
+                통해 모두가 성장할 수 있도록 노력하는 팀입니다. <br />저희는
+                소통과 협력을 통해 팀의 힘을 발휘하고, 함께 더 큰 성과를 이룰
+                것입니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sectionddd container" id="teamProject">
+      <div class="teamProject-container">
+        <h2 class="neon" >Team Project</h2>
+        <div class="sec">
+          <ul class="slideshowUl">
+            <div class="slideshow">
+              <!-- 숫자와 캡션이 있는 이미지 -->
+              <div class="mySlides">
+                <h4 class="flux">FARM CAPYZOU</h4>
+                <a href="pmb/FARM CAPYZOU.html" target="_blank"><img src="image/eyecatch.png" alt=""></a>
+              </div>
+
+              <div class="mySlides">
+                <h4 class="flux">Wedding Party Invitation</h4>
+                <a href="pmb/Wedding Party Invitation"target="_blank"><img src="image/message_img.png" alt=""></a>
+              </div>
+
+              <div class="mySlides">
+                <h4 class="flux">Harvest Restaurant</h4>
+                <a href="pmb/Harvest Restaurant.html"target="_blank"><img src="image/top_pclogo.svg" alt="" ></a>
+              </div>
+
+              <div class="mySlides">
+                <h4 class="flux">travel goals</h4>
+                <a href="pmb/travel goals.html"target="_blank"><img src="image/ocean.jpg" ></a>
+              </div>
+
+              <div class="mySlides">
+                <h4 class="flux">Final Project</h4>
+                <a href="pmb/Final.html"target="_blank"><img src="image/me_alone.jpg" ></a>
+              </div>
+
+            </div><!-- class="slideshow" -->
+            <!-- 다음, 이전 이미지 버튼 -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="pv-section pv-section-1 container" id="pv-section">
+      <div class="my-profil">
+        <div class="fade-wrap">
+          <ul>
+            <li>
+              <img src="./image/문수현님.jpg" alt="문수현님" />
+              <div class="overlay">
+                <h3>문수현</h3>
+                <p>서브문구</p>
+              </div>
+            </li>
+            <li>
+              <img src="./image/박준님.jpg" alt="박준님" />
+              <div class="overlay">
+                <h3>박준</h3>
+                <p>서브문구</p>
+              </div>
+            </li>
+            <li>
+              <img src="./image/안수빈님.jpg" alt="안수빈님" />
+              <div class="overlay">
+                <h3>안수빈</h3>
+                <p>서브문구</p>
+              </div>
+            </li>
+            <li>
+              <img src="image/무빈이형.jpg" alt="img" />
+              <div class="overlay">
+                <h3>편무빈</h3>
+                <p>서브문구</p>
+              </div>
+            </li>
+            <li>
+              <img src="image/진서형.jpg" alt="img" />
+              <div class="overlay">
+                <h3>윤진서</h3>
+                <p>서브문구</p>
+              </div>
+            </li>
+            <li>
+              <img src="./image/강채은님.jpg" alt="강채은님" />
+              <div class="overlay">
+                <h3>강채은</h3>
+                <p>서브문구</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-pic container" id="project-pic">
+      <div class="project-container">
+        <h2>프로젝트 진행과정</h2>
+        <div class="project-pic-ul">
+          <ul>
+            <li class="img-grid-1">
+              <p><span>4월 5일</span> 첫 회의</p>
+              <img src="image/4월5일 회의.jpg" alt="april">
+            </li>
+            <li class="img-grid-2">
+              <p><span>4월 8일</span> 프로젝트 진행중</p>
+              <img src="image/4월8일 프로직트진행.jpg" alt="april">
+            </li>
+            <li class="img-grid-3">
+              <p>4월 9일<span> 프로젝트 진행중</span></p>
+              <img src="https://source.unsplash.com/featured/:1" alt="april">
+            </li>
+            <li class="img-grid-4">
+              <p>4월 15일<span> 프로젝트 진행중</span> </p>
+              <img src="https://source.unsplash.com/featured/:2" alt="april">
+            </li>
+            <li class="img-grid-5">
+              <p>4월 16일<span> 프로젝트 진행중</span> </p>
+              <img src="https://source.unsplash.com/featured/:3" alt="april">
+            </li>
+            <li class="img-grid-6">
+              <p>4월 17일<span> 프로젝트 진행중</span> </p>
+              <img src="https://source.unsplash.com/featured/:4" alt="april">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

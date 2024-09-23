@@ -1,0 +1,107 @@
+#hero {
+    height: 800px;
+    background-image: url(../images/ocean.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#hero-content {
+    width:900px;
+    background-color: rgba(51,47,47,0.8);
+    box-shadow: 2px 4px 8px rgb(68,67,67);
+    position: relative;
+    top: 200px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+#hero-content h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+}
+
+#hero-content p {
+color: white;
+text-transform: uppercase;
+font-size: 24px;
+font-weight: 300;
+margin-bottom: 32px;
+}
+
+#hero-content a {
+text-decoration: none;
+background-color: rgb(255,251,0);
+padding: 12px 24px;
+color:black;
+font-size: 24px;
+font-weight: bold;
+border-radius: 8px;
+box-shadow: 2px 4px 8px rgb(68,67,67);
+}
+
+#hero-content a:hover {
+    background-color: rgb(255,238,0);
+}
+
+#highlights {
+    padding: 24px;
+    background:  linear-gradient(0deg, rgb(227,255,253), rgb(202,243,240));
+}
+
+#highlights h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(59,65,64);
+    margin: 24px 0;
+}
+
+#destinations {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 40px;
+    width: 90%;
+}
+
+.destination {
+    margin: 0 20px;
+    text-transform: uppercase;
+    width: 25%;
+}
+
+.destination p {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0;
+    color: rgb(124,123,123);
+}
+
+.destination strong {
+    color: rgb(0,160,117);
+}
+
+/* object-fit 속성은 이미지나 비디오 요소의 크기를 조절하는 방법을 지정합니다.
+cover 값은 요소의 가로와 세로를 채우면서도 
+가로세로 비율을 유지하도록 이미지나 비디오를 조절합니다.
+
+이미지나 비디오가 부모 요소에 딱 맞게 표시되지 않을 경우, 
+cover 값은 해당 요소를 늘려서 가로 또는 세로 중 하나의 차원이 부모 요소에 맞도록 하고, 
+다른 차원은 넘치는 부분이 자르게 됩니다.
+따라서 cover 값은 부모 요소에 꽉 차도록 이미지나 비디오를 확장하면서도 
+비율을 유지하며, 남은 부분은 자르는 효과를 줍니다.
+남은 부분이 잘리기 때문에, 사진에서 원하는 부분이 안나오게 될 수 있으므로
+cover 사용 후 원하는 사진파트가 화면에 나오게 따로 사진의 표시위치를 지정합니다 */
+
+.destination img {
+    height: 200px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 2px 4px 8px rgb(68,67,67);
+}

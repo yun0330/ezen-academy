@@ -1,0 +1,18 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  .footer {
+    margin-top: 50px; 
+    text-align: center;
+    color: #6c757d; 
+  }
+  
+
+  .footer .copyright-text {
+    font-size: 0.875rem; 
+  }
+  

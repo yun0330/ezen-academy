@@ -1,0 +1,402 @@
+.innerWrap {
+      border-bottom: 5px solid rgb(158, 71, 0);
+    width: 1240px;
+    margin: 0 auto;
+    padding: 80px 20px 0;
+    
+}
+/* letter-spacing: 0.25em; 글자간 간격 조절
+0.25em 뜻은 글자 높이 1/4을 의미한다 */
+main h2 {
+    letter-spacing: 0.25em;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 80px;
+
+}
+
+header {
+    background: url(../images/hero.jpg) no-repeat right center/cover;
+    height: 720px;
+}
+
+header h1{
+    padding-top: 120px;
+
+}
+
+/* 태그의 위치를 지정할 때 (좌우,상하 아니고 위치지정)
+position .innerWrap을 통해 요소를 배치할 수 있습니다
+요소의 위치의 기준이 될 부모요소에 position:relative;
+라고 작성합니다 다음 움직이고자 하는 자식 요소에
+position:absolute;라고 작성하고 구체적인 위치를 나타냅니다 */
+header .innerWrap{
+    height: 720px;
+    position: relative;
+}
+ 
+/* position으로 absolute 옵션을 주면
+p요소 즉 class=scoll 이 친구가 화면을 가득 채우는 성질을 잃습니다
+강제로 화면을 가득 채우는 성질을 회복하도록 width:100%; 사용 */
+header .scroll{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+}
+
+header .scroll img {
+    margin-top: 8px;
+}
+
+/* position으로 fixed옵션을 주면
+이 친구가 화면을 가득 태우는 성질을 잃습니다
+width: 100%; 사용해서 가로폭을 채우는 성질을 회복한다 
+position으로 구도를 잡으면 부모 자식 요소들 끼리
+원치않는 형태로 겹칠때가 있습니다
+해당 부모 자식간 위치선정을 할 수 있는데 이때 쓰는게 z-index 입니다
+z-index를 높은값을 줄 수록 앞으로 나옵니다  */
+header nav  {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+   z-index: 100;
+   background-color: rgb(111, 46, 0);
+   color: #ffffff;
+}
+
+header nav ul {
+    display: flex;
+    width: 1240px;
+    margin: 0 auto;
+    justify-content: space-around;
+    padding: 10px 20px;
+
+}
+
+/* a:hover 같이 :hover 같은걸 "가상선택자" 라고 합니다 */
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.msgSec {
+    background-color: #ffffff;
+
+}
+.msgSec p{
+    text-align: center;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+/* 마진 상쇄에 주의하자
+인접한 요소에 상하방향으로 margin을 지정할 때
+40px + 80px =120px 는 일어나지 않는다
+margin상쇄가 발생할 시 더 큰값의 마진만 적용된다 */
+.msgSec p.illust {
+    margin-top: 80px;
+    margin-bottom:0px ;
+    position: relative;
+    /* 청첩장 그림 양 옆에 잎사귀 그림을 붙이려면 
+부모요소가 되는 그림에 position: relative; 사용*/
+position: relative;
+}
+
+/* css 우선순위 정리
+1. 밑으로 온 파일이 우선순위를 갖는다
+2. 구체적인 태그가 우선순위를 갖는다
+타입선택자 --> 클래스 속성 --> id속성 --> 태그에 직접 작성된 스타일
+<p style="color:red;"> </p> */
+
+/* ::before는 그 요소 앞을 뜻하는 가상요소이다 */
+.msgSec p.illust::before{
+content: url(../images/deco_left.png);
+position: absolute:
+left: 320px;
+bottom: -30px;
+}
+
+.msgSec p.illust::after{
+    content: url(../images/deco_right.png);
+position: absolute;
+right: 320px;
+bottom: -30px;
+}
+
+.dateSec {
+    background-color: rgb(255, 255, 255);
+    padding-bottom:120px ;
+}
+
+.dateSec .layoutWrap {
+    display: flex ;
+
+}
+
+/* flex 하고 나면 flex 안에 구성요소 너비를 배정해야 한다 */
+
+.dateSec .layoutWrap > p {
+    flex-basis: 735px;
+}
+
+.dateSec .layoutWrap > div {
+    flex-basis: 465px;
+    padding-top:100px ;
+    
+}
+
+.dateSec .dateDetailSec {
+    font-size: 72px;
+    margin: 0 0 170px -100px;
+     background-color: #ffffff;
+    padding: 40px 64px;
+    line-height: 1.2;
+    
+    
+}
+
+.word1 {
+    font-size: 50px;
+    color: rgb(111, 46, 0);
+}
+
+   .word2 {
+    font-size: 40px;    
+    color: rgb(111, 46, 0);
+}
+
+.word3 {
+    font-size: 60px;  
+     
+}
+
+.accessSec{
+    margin-left: 48px;
+}
+
+.accessSec h3 {
+    font-size: 55px;
+    margin-bottom:8px;
+    letter-spacing:.05em; 
+    color: rgb(255, 231, 201); 
+}
+
+.accessSec p {
+ line-height: 1.6;
+}
+
+.formSec {
+    background-color: rgb(255, 241, 224); 
+    padding-bottom: 60px;
+}
+
+form {
+    width:600px ;
+    margin: 0 auto;
+}
+
+/* input[type="text"]이런식으로 선택자를 속성 선택자라고 합니다
+input[type="text"] 안에 type 글어간 선택자 전부
+ [type="text"] input 태그 아니어도 되니까 해당 조건 태그 전부 다*/
+
+input[type="text"], input[type="email"], select, textarea{
+background-color: #ffffff;
+    border:1px solid #dbdbdb;
+    width:100%;
+    margin-top:5px;
+    padding: 4px 5px;
+
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    vertical-align: baseline;
+    margin-right: 4px;
+}
+
+.attendRadio {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.attendRadio label {
+    margin: 0 20px;
+    font-size: 24px;
+}
+
+.allergyCheck label {
+    margin-right: 24px;
+}
+
+select {
+    background: #ffffff url(../images/arrow.png) no-repeat 98% 50%/17px 10px;
+}
+
+textarea {
+    height: 140px;
+    margin-bottom: 30px;
+}
+
+form > p {
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.submitBtn {
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: rgb(111, 46, 0);
+    color: #ffffff;
+    padding: 18px 80px;
+}
+
+footer {
+    background-color: rgb(111, 46, 0);
+    color: #ffffff;
+    padding: 14px 10px 20px;
+    text-align: center;
+}
+
+/* 패럴랙스 효과: 시차를 가지는 효과입니다
+배경이미지를 고정시키고 앞면 콘텐츠와 스크롤에 차이를 주면
+시각적 시차효과를 가질 수 있습니다 */
+
+.dateSec {
+    margin-bottom:480px ;
+    
+}
+
+/* 배경이미지는 background롤 지정하니까 컨텐츠를 비웁니다
+해당 css를 통한 목표는 화면을 가득 채우고 고정배치하기 위함입니다 */
+.dateSec::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:url(../images/bg.jpg) no-repeat center/cover ;
+    z-index:-1 ;  
+}
+
+/* transition-property로 효과를 적용할 css속성을 선택
+transition-duration로 효과의 속도
+transition-timing-function: ease-in; 시작시 천천히하다 종료는 빠르게*/
+input[type="submit"]:hover {
+    background-color:rgb(0, 0, 0);
+    margin-left:20px ;
+    transition-property: background-color,margin-lefr;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;
+}
+  
+/* scrollAnimation 이런 이름은 내가 맘대로 지을 수 있음 */
+
+@keyframes scrollAinmation{
+    0%{
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+
+    50%{
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+
+    50.1%{
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+
+    100% {
+        transform:scaleY(0) ;
+        transform-origin: bottom;
+    }
+}
+
+header  .scroll img {
+    animation-name: scrollAinmation;
+    animation-duration: 1.8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* 640px 스마트폰
+960px 테블릿
+1280px 노트북
+1280px 초과: pc
+반응형 웹 기능구현 = 미디어쿼리 = @media
+반응형 웹 주의사항: 화면 너비를 절대 픽셀로 정하면 나중에
+css로 전부 바로잡아야 하므로 반응형 웹 사용시 화면의 크기는
+비율로 잡아야 한다
+ */
+
+@media screen and (max-width:640px) {
+/* 스마트폰용 css성질 */
+.innerWrap, header nav ul, form{
+    width: 100%;
+}
+header h1 img,
+.msgSec p.illust img,
+.dateSec .layoutWrap > p img{
+    width: 100%;
+}
+.msgSec p,.illust::before{
+    left: -16px;
+    bottom: -80px;
+    transform: scale(0.7);
+}
+.msgSec p,.illust::after{
+    right: -16px;
+    bottom: -80px;
+    transform: scale(0.7);
+}
+body {
+    font-size: 16px;
+}
+ main h2 {
+    font-size: 44px;
+    margin-bottom: 60px;
+
+ }
+ header{
+    background: url(../images/hero.jpg) no-repeat right top/cover;
+ }
+ /* vh는 높이가 이미지의 크이에 맞게 상대자정해 줍니다
+ 100vh는 화면 높이의 100%, 100wh는 화면 너비의 100%
+ %도 상대비율이고 vh도 상대비율이면 뭔차이?
+ vh는 화면 사이즈에 따라 비율이 결정되고
+ %는 부모 요소를 기준으로한 비율
+ vh wh는 화면 비율 기준으로 %를 나타내는 것이다
+ 그냥 %는 부모요소를 기준으로 몇%인가
+ 80vh와 80%는 매우 다르다
+ vh wh를 쓰면 화면의 크기가 다른
+ 스마트폰에서 동일한 비율로 나타낼 수 있다*/
+ header .innerWrap {
+    height: 90vh;
+ }
+.msgSec p {
+    text-align: left;
+}
+}
+/*     
+@media screen and (max-width:960px){
+    /* 태블릿용 css 성질 */
+
+
+/* @media screen and (max-width:1280px){
+    노트북용 css 성질 */
+
+
+/* @media screen and (min-width:1280px){
+    /* pc용 css 성질 */
+
+
+    
+
